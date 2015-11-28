@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/backgroundImage"
+
+        style="@style/AuthBackgroundImage" />
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/AuthTitle" />
+
+    <LinearLayout
+        android:id="@+id/editTextLayout"
+        style="@style/AuthFieldContainer">
+
+    <EditText
+        android:id="@+id/usernameField"
+        android:hint="@string/prompt_username"
+        style="@style/AuthEditText" />
+
+    <EditText
+        android:id="@+id/emailField"
+        style="@style/AuthEditText"
+        android:ems="10"
+        android:hint="@string/prompt_email"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/passwordField"
+        style="@style/AuthEditText"
+        android:ems="10"
+        android:hint="@string/prompt_password"
+        android:inputType="textPassword" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/buttonDivider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextLayout"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/button_divider" />
+
+    <Button
+        android:id="@+id/signUpButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/buttonDivider"
+        android:layout_alignRight="@+id/buttonDivider"
+        android:layout_alignTop="@+id/cancelButton"
+        android:text="SIGN UP" />
+
+    <Button
+        android:id="@+id/cancelButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/buttonDivider"
+        android:layout_alignStart="@+id/buttonDivider"
+        android:layout_below="@+id/editTextLayout"
+        android:text="@string/cancel_button_label" />
+
+</RelativeLayout>
